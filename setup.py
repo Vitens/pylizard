@@ -1,12 +1,16 @@
 from setuptools import setup
 
-setup(name='pyimod',
+setup(name='pylizard',
       version='0.1',
-      description='iMOD files read, edit and write',
-      url='https://github.com/VitensTC/pyimod/',
+      description='Lizard',
+      url='https://github.com/VitensTC/pylizard/',
       author='Sjoerd Rijpkema',
       author_email='Sjoerd.Rijpkema@vitens.nl',
-      packages=['pyimod'],
-      install_requires=['pyshp',\
-                        'numpy'],
+      packages=['pylizard'],
+      install_requires=['requests',
+                        'pandas',
+                        'pyproj',
+                        'datetime',
+                        'numpy',
+                        'matplotlib'],
       zip_safe=False)
