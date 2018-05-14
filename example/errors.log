@@ -1,0 +1,2 @@
+18-05-09 07:18 - pastas.decorators - ERROR - The stressmodel name you provided is not in the stressmodels dict. Please select from the following list: odict_keys(['rainevap'])
+18-05-09 08:12 - pastas.decorators - ERROR - The stressmodel name you provided is not in the stressmodels dict. Please select from the following list: odict_keys(['rain', 'evap'])

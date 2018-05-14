@@ -1,0 +1,189 @@
+18-05-08 17:02 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-08 17:25 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-08 17:25 - pastas.timeseries - INFO - Inferred frequency from time series None: freq=D 
+18-05-08 17:25 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-08 17:25 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-08 17:25 - pastas.timeseries - INFO - Inferred frequency from time series None: freq=D 
+18-05-08 17:25 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-08 18:57 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-08 18:57 - pastas.timeseries - INFO - Inferred frequency from time series None: freq=D 
+18-05-08 18:57 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-08 18:59 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-08 18:59 - pastas.timeseries - INFO - Inferred frequency from time series None: freq=D 
+18-05-08 18:59 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-08 19:00 - pastas.model - WARNING - Model is not optimized yet, initial parameters are used.
+18-05-08 19:00 - pastas.model - WARNING - Model is not optimized yet, initial parameters are used.
+18-05-08 19:00 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-08 19:00 - pastas.timeseries - INFO - Inferred frequency from time series None: freq=D 
+18-05-08 19:00 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-08 19:09 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-08 19:09 - pastas.timeseries - INFO - Inferred frequency from time series None: freq=D 
+18-05-08 19:09 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-08 19:12 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-08 19:13 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-08 19:13 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-08 19:13 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-08 19:13 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-08 19:15 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-08 19:15 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-08 19:15 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-08 19:15 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-08 19:18 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-08 19:18 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-08 19:18 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-08 19:18 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 07:13 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 07:13 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 07:13 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 07:13 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 07:14 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 07:14 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 07:14 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 07:14 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 07:14 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 07:14 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 07:14 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 07:14 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 07:18 - pastas.decorators - ERROR - The stressmodel name you provided is not in the stressmodels dict. Please select from the following list: odict_keys(['rainevap'])
+18-05-09 07:31 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 07:31 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 07:31 - pastas.timeseries - INFO - 73 nan-value(s) was/were found and filled with: 0.0
+18-05-09 07:31 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 07:31 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 07:33 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 07:33 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 07:33 - pastas.timeseries - INFO - 73 nan-value(s) was/were found and filled with: 0.0
+18-05-09 07:33 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 07:33 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 07:34 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 07:34 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 07:34 - pastas.timeseries - INFO - 73 nan-value(s) was/were found and filled with: 0.0
+18-05-09 07:34 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 07:34 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 07:34 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 07:34 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 07:34 - pastas.timeseries - INFO - 73 nan-value(s) was/were found and filled with: 0.0
+18-05-09 07:34 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 07:34 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 07:37 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 07:37 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 07:37 - pastas.timeseries - INFO - 73 nan-value(s) was/were found and filled with: 0.0
+18-05-09 07:37 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 07:37 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 07:39 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 07:39 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 07:39 - pastas.timeseries - INFO - 73 nan-value(s) was/were found and filled with: 0.0
+18-05-09 07:39 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 07:39 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 07:40 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 07:40 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 07:40 - pastas.timeseries - INFO - 73 nan-value(s) was/were found and filled with: 0.0
+18-05-09 07:40 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 07:40 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 07:41 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 07:41 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 07:41 - pastas.timeseries - INFO - 73 nan-value(s) was/were found and filled with: 0.0
+18-05-09 07:41 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 07:41 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 07:41 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 07:41 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 07:41 - pastas.timeseries - INFO - 73 nan-value(s) was/were found and filled with: 0.0
+18-05-09 07:41 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 07:41 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 07:41 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 07:41 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 07:41 - pastas.timeseries - INFO - 73 nan-value(s) was/were found and filled with: 0.0
+18-05-09 07:41 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 07:41 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 07:42 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 07:42 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 07:42 - pastas.timeseries - INFO - 73 nan-value(s) was/were found and filled with: 0.0
+18-05-09 07:42 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 07:42 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 07:42 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 07:42 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 07:42 - pastas.timeseries - INFO - 73 nan-value(s) was/were found and filled with: 0.0
+18-05-09 07:42 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 07:42 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 07:42 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 07:42 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 07:42 - pastas.timeseries - INFO - 73 nan-value(s) was/were found and filled with: 0.0
+18-05-09 07:42 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 07:42 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 07:42 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 07:42 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 07:42 - pastas.timeseries - INFO - 73 nan-value(s) was/were found and filled with: 0.0
+18-05-09 07:42 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 07:42 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 07:42 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 07:42 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 07:42 - pastas.timeseries - INFO - 73 nan-value(s) was/were found and filled with: 0.0
+18-05-09 07:42 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 07:42 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 08:05 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 08:05 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 08:05 - pastas.timeseries - INFO - 5 nan-value(s) was/were found and filled with: 0.0
+18-05-09 08:05 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 08:05 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 08:05 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 08:05 - pastas.timeseries - INFO - 5 nan-value(s) was/were found and filled with: 0.0
+18-05-09 08:05 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 08:07 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 08:07 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 08:07 - pastas.timeseries - INFO - 5 nan-value(s) was/were found and filled with: 0.0
+18-05-09 08:07 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 08:07 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 08:07 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 08:07 - pastas.timeseries - INFO - 5 nan-value(s) was/were found and filled with: 0.0
+18-05-09 08:07 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 08:07 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 08:07 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 08:07 - pastas.timeseries - INFO - 5 nan-value(s) was/were found and filled with: 0.0
+18-05-09 08:07 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 08:07 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 08:08 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 08:08 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 08:08 - pastas.timeseries - INFO - 5 nan-value(s) was/were found and filled with: 0.0
+18-05-09 08:08 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 08:08 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 08:11 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 08:11 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 08:11 - pastas.timeseries - INFO - 5 nan-value(s) was/were found and filled with: 0.0
+18-05-09 08:11 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 08:11 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 08:12 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 08:12 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 08:12 - pastas.timeseries - INFO - 5 nan-value(s) was/were found and filled with: 0.0
+18-05-09 08:12 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 08:12 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 08:12 - pastas.decorators - ERROR - The stressmodel name you provided is not in the stressmodels dict. Please select from the following list: odict_keys(['rain', 'evap'])
+18-05-09 08:13 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 08:13 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 08:13 - pastas.timeseries - INFO - 5 nan-value(s) was/were found and filled with: 0.0
+18-05-09 08:13 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 08:13 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 08:16 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 08:16 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 08:16 - pastas.timeseries - INFO - 5 nan-value(s) was/were found and filled with: 0.0
+18-05-09 08:16 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 08:16 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 08:40 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 08:40 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 08:40 - pastas.timeseries - INFO - 5 nan-value(s) was/were found and filled with: 0.0
+18-05-09 08:40 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 08:40 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 08:45 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 08:45 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 08:45 - pastas.timeseries - INFO - 5 nan-value(s) was/were found and filled with: 0.0
+18-05-09 08:45 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 08:45 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 08:45 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 08:45 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 08:45 - pastas.timeseries - INFO - 5 nan-value(s) was/were found and filled with: 0.0
+18-05-09 08:45 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 08:45 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
+18-05-09 14:15 - pastas.timeseries - INFO - Cannot determine frequency of series combi
+18-05-09 14:15 - pastas.timeseries - INFO - Inferred frequency from time series RH: freq=D 
+18-05-09 14:15 - pastas.timeseries - INFO - 5 nan-value(s) was/were found and filled with: 0.0
+18-05-09 14:15 - pastas.timeseries - INFO - Inferred frequency from time series EV24: freq=D 
+18-05-09 14:15 - pastas.model - INFO - There are observations between the simulation timesteps. Linear interpolation is used.
