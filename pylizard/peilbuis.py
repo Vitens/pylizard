@@ -37,41 +37,42 @@ class Peilbuis:
         self.uuid_hand  = buis['uuid_hand'][0]
         self.uuid_diver = buis['uuid_diver'][0]
 
-    def head_total(self, method='fill'):
-        if method=='fill':
-            if self.uuid_hand!='' and self.uuid_diver!='':
-                df_head = pandas.concat([self.head_diver, self.head_hand],
-                                        axis=1)
-                df_head['combi']= df_head['diver']
-                df_head.loc[pandas.isnull(df_head['diver']), 'combi'] = df_head['hand']
-                return df_head['combi']
-            elif self.uuid_hand!='':
-                return self.head_hand
-            elif self.uuid_diver!='':
-                return self.head_diver
-            else:
-                return None
-        else:
-            return None
+    def head_total(self, method='fill_no_diver_freq_1day_linear'):
+        if self.uuid_hand!='' and self.uuid_diver!='':
+            if 'fill_no_diver' in method:
+                df_head = pandas.concat([self.head_diver, self.head_hand], axis=1)
+                df_head['total']= df_head['diver']
+                df_head.loc[pandas.isnull(df_head['diver']), 'total'] = df_head['hand']
 
-    def plot(self, median=True, ax=None, **kwargs):
+                if method == 'fill_no_diver':
+                    return df_head['total']
+                elif method=='fill_no_diver_freq_1day_linear':
+                    h_tot = df_head['total'].resample('1D').mean().interpolate()
+                    h_tot.index = h_tot.index.shift('12', 'h')
+                    return h_tot
+        else:
+            raise Exception('No hand and/or diver measurement available')
+
+    def plot(self, stats=True, ax=None, **kwargs):
         head_total = self.head_total()
         if ax is None:
             fig = self._get_figure(**kwargs)
             fig.suptitle('{}, filter {} \n({}, {})'.format(self.code, self.filt, self.bkf, self.okf))
             head_total.plot(style='b-')
-            if median:
-                plt.plot([head_total.index.min(), head_total.index.max()], 2*[head_total.median()], 'r--')
-                plt.legend([head_total.name, 'mediaan'])
-            else:
-                plt.legend()
+            if stats:
+                plt.axhline(head_total.quantile(0.06), linestyle='--', color='r', label='0.06 kwantiel')
+                plt.axhline(head_total.quantile(0.50), linestyle='--', color='g', label='0.50kwantiel')
+                plt.axhline(head_total.quantile(0.94), linestyle='--', color='orange', label='1.00 kwantiel')
+            plt.legend()
             plt.ylabel('Stijghoogte (m+N.A.P.)')
             plt.xlabel('Datum')
             return fig.axes
         else:
             head_total.plot(ax=ax)
-            if median:
-                ax.plot([head_total.index.min(), head_total.index.max()], 2*[head_total.median()], 'r--')
+            if stats:
+                ax.axhline(head_total.quantile(0.06), linestyle='--', color='r', label='0.06 kwantiel')
+                ax.axhline(head_total.quantile(0.50), linestyle='--', color='g', label='0.50kwantiel')
+                ax.axhline(head_total.quantile(0.94), linestyle='--', color='orange', label='1.00 kr--')
             return ax
 
     def _get_figure(self, **kwargs):
