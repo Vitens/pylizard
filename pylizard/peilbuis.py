@@ -1,6 +1,6 @@
 import requests, pyproj, pandas, matplotlib.pyplot as plt
 
-from .func import get_timeseries
+from .func import get_timeseries, pnt2buis
 
 class Peilbuis:
     def __init__(self, code, filt, report=False):
@@ -15,36 +15,27 @@ class Peilbuis:
         data = requests.get(url_loc).json()['results']
 
         lat, lon = data[0]['geometry']['coordinates'][1], data[0]['geometry']['coordinates'][0]
-        self.lat, self.lon = lat, lon
 
         p_rd =  pyproj.Proj(init='epsg:28992')
         p_wgs = pyproj.Proj(proj='latlong',datum='WGS84')
 
-        self.x, self.y = pyproj.transform(p_wgs, p_rd, lon, lat)
+        x, y = pyproj.transform(p_wgs, p_rd, lon, lat)
 
-        dist=0.25
-        lizard_url_stn = 'https://vitens.lizard.net/api/v3/groundwaterstations/'
-        url_stn = '{}?dist={}&point={},{}'.format(lizard_url_stn, dist, lon, lat)
-        if self.report:
-            print('GET', url_stn)
-        data = requests.get(url_stn).json()['results']
+        dist=100
+        p = pnt2buis(x, y, dist, report=self.report)
+        buis = p.loc[(p['buis']==code) & (p['filt']== filt)]
 
-        self.surface_level = data[0]['surface_level']
-        for p in data[0]['filters']:
-            f = int(p['code'][-3:])
-            if f==self.filt:
-                data=p
-
-        self.bkf = data['filter_top_level']
-        self.okf = data['filter_bottom_level']
-        self.uuid_hand  = ''
-        self.uuid_diver = ''
-        if data['timeseries']!=[]:
-            for t in data['timeseries']:
-                if t['parameter']=='Handpeiling':
-                    self.uuid_hand = t['uuid']
-                elif t['parameter']=='Stijghoogte':
-                    self.uuid_diver = t['uuid']
+        if len(buis)!=1:
+            raise Exception('None or to many filters found')
+        self.x = buis['x'][0]
+        self.y = buis['y'][0]
+        self.lat = buis['lat'][0]
+        self.lon = buis['lon'][0]
+        self.surface_level = buis['surface_level'][0]
+        self.bkf = buis['bkf'][0]
+        self.okf = buis['okf'][0]
+        self.uuid_hand  = buis['uuid_hand'][0]
+        self.uuid_diver = buis['uuid_diver'][0]
 
     def head_total(self, method='fill'):
         if method=='fill':

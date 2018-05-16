@@ -36,10 +36,10 @@ def pnt2buis(x, y, dist, report=False, lizard_url_stn='https://vitens.lizard.net
                             uuid_hand = t['uuid']
                         elif t['parameter']=='Stijghoogte':
                             uuid_diver = t['uuid']
-                meta.append([buis, filt, x, y, surface_level, bkf, okf, uuid_hand, uuid_diver])
+                meta.append([buis, filt, x, y, lat, lon, surface_level, bkf, okf, uuid_hand, uuid_diver])
                 idx.append(i)
     return pandas.DataFrame(meta,
-                            columns=['buis', 'filt', 'x', 'y', 'surface_level', 'bkf', 'okf', 'uuid_hand', 'uuid_diver'],
+                            columns=['buis', 'filt', 'x', 'y', 'lat', 'lon', 'surface_level', 'bkf', 'okf', 'uuid_hand', 'uuid_diver'],
                             index=idx)
 
 def get_timeseries(uuid, tmin=None, tmax=None, report=False, lizard_url_ts='https://vitens.lizard.net/api/v3/timeseries/'):
