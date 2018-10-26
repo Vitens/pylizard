@@ -1,11 +1,12 @@
 import requests, pandas, pyproj, datetime, numpy
 
 
-def pnt2buis(x, y, dist, report=False, lizard_url_stn='https://vitens.lizard.net/api/v3/groundwaterstations/'):
+def pnt2buis(x, y, dist, report=False, url_lizard='https://vitens.lizard.net/api/v3/', proxydict={}):
     p_rd =  pyproj.Proj(init='epsg:28992')
     p_wgs = pyproj.Proj(proj='latlong',datum='WGS84')
 
     lon, lat = pyproj.transform(p_rd, p_wgs, x, y)
+    lizard_url_stn=url_lizard+'groundwaterstations/'
 
     meta = []
     idx = []
@@ -13,7 +14,7 @@ def pnt2buis(x, y, dist, report=False, lizard_url_stn='https://vitens.lizard.net
     while nxt_url!=None:
         if report:
             print('GET', nxt_url)
-        data = requests.get(nxt_url).json()
+        data = requests.get(nxt_url, proxies=proxydict).json()
         results = data['results']
         nxt_url=data['next']
 
@@ -38,19 +39,23 @@ def pnt2buis(x, y, dist, report=False, lizard_url_stn='https://vitens.lizard.net
                             uuid_diver = t['uuid']
                 meta.append([buis, filt, x, y, lat, lon, surface_level, bkf, okf, uuid_hand, uuid_diver])
                 idx.append(i)
-    return pandas.DataFrame(meta,
-                            columns=['buis', 'filt', 'x', 'y', 'lat', 'lon', 'surface_level', 'bkf', 'okf', 'uuid_hand', 'uuid_diver'],
-                            index=idx)
+    df = pandas.DataFrame(meta,
+                          columns=['buis', 'filt', 'x', 'y', 'lat', 'lon', 'surface_level', 'bkf', 'okf', 'uuid_hand', 'uuid_diver'],
+                          index=idx)
+    df['bkf']=df['surface_level']-df['bkf']
+    df['okf']=df['surface_level']-df['okf']
+    return df
 
-def get_timeseries(uuid, tmin=None, tmax=None, report=False, lizard_url_ts='https://vitens.lizard.net/api/v3/timeseries/'):
+def get_timeseries(uuid, tmin=None, tmax=None, report=False, url_lizard='https://vitens.lizard.net/api/v3/', proxydict={}):
+    lizard_url_ts=url_lizard+'timeseries/'
     url = lizard_url_ts + uuid
     if report:
         print('GET', url)
 
-    ts = requests.get(url).json()
+    ts = requests.get(url, proxies=proxydict).json()
 
-    ts_tmin = datetime.datetime.fromtimestamp(numpy.sign(ts['start'])*ts['start']/1000)
-    ts_tmax = datetime.datetime.fromtimestamp(numpy.sign(ts['end'])*ts['end']/1000)
+    ts_tmin = datetime.datetime.fromtimestamp(numpy.sign(ts['start'])*ts['start']/1000-2*3600)
+    ts_tmax = datetime.datetime.fromtimestamp(numpy.sign(ts['end'])*ts['end']/1000+2*3600)
 
     if (tmin is None) or (tmax is None):
         ts = ts_tmin.isoformat('T') + 'Z'
@@ -62,7 +67,7 @@ def get_timeseries(uuid, tmin=None, tmax=None, report=False, lizard_url_ts='http
     url = '{}{}/data/?start={}&end={}'.format(lizard_url_ts, uuid, ts, te)
     if report:
         print('GET', url)
-    data = requests.get(url).json()
+    data = requests.get(url, proxies=proxydict).json()
     df = pandas.DataFrame(data)
 
     df['datetime'] = pandas.to_datetime(1e6*df.timestamp)

@@ -3,16 +3,16 @@ import requests, pyproj, pandas, matplotlib.pyplot as plt
 from .func import get_timeseries, pnt2buis
 
 class Peilbuis:
-    def __init__(self, code, filt, report=False):
+    def __init__(self, code, filt, report=False, url_lizard='https://vitens.lizard.net/api/v3/', proxydict={}):
         self.report = report
         self.code = code
         self.filt = filt
 
-        lizard_url_loc = 'https://vitens.lizard.net/api/v3/locations/'
+        lizard_url_loc = url_lizard + 'locations/'
         url_loc = '{}?code__icontains={}{}'.format(lizard_url_loc, code, str(filt).zfill(3) )
         if self.report:
             print('GET', url_loc)
-        data = requests.get(url_loc).json()['results']
+        data = requests.get(url_loc, proxies=proxydict).json()['results']
 
         lat, lon = data[0]['geometry']['coordinates'][1], data[0]['geometry']['coordinates'][0]
 
